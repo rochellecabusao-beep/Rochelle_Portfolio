@@ -1,0 +1,14 @@
+/* Styles specific to index.html */
+.index-hero {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+}
+
+.index-hero h1 {
+    font-size: 56px;
+    color: #fff;
+}
+
+.index-featured {
+    background: #fff3e0;
+}
