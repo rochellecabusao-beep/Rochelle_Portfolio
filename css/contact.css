@@ -1,4 +1,4 @@
-/* Modern and responsive styles for index.html */
+/* Modern and responsive styles for contact.html */
 
 /* Importing modern fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
@@ -52,12 +52,12 @@ body {
 }
 
 .navbar nav a:hover {
-    color: #ff7e5f;
+    color: #f39c12;
 }
 
 .navbar nav a.active {
-    color: #ff7e5f;
-    border-bottom: 2px solid #ff7e5f;
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
     padding-bottom: 0.5rem;
 }
 
@@ -67,9 +67,10 @@ body {
     align-items: center;
     justify-content: center;
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    min-height: 400px;
+    text-align: center;
+    min-height: 300px;
 }
 
 .hero-container {
@@ -78,53 +79,34 @@ body {
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .hero-content {
     flex: 1;
-    animation: fadeInLeft 0.6s ease;
-}
-
-.hero-image {
-    flex: 1;
-    text-align: center;
-    animation: fadeInRight 0.6s ease;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.hero-image img:hover {
-    transform: scale(1.05);
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
 .hero .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     opacity: 0.95;
 }
 
 .hero .description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     opacity: 0.9;
 }
 
-/* Featured Section */
-.featured {
-    padding: 4rem 2rem;
-    background: #fff3e0;
+/* Contact Section */
+.contact-section {
+    padding: 3rem 2rem;
+    background: #f8f9fa;
 }
 
 .featured-content {
@@ -134,46 +116,53 @@ body {
 
 .featured-content h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     color: #333;
-    font-weight: 700;
 }
 
-/* Grid Layout */
-.grid {
+/* Contact Info Grid */
+.contact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
-.card {
+.contact-item {
     background: white;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border-top: 4px solid #ff7e5f;
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.card h3 {
+.contact-item h3 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: #ff7e5f;
-    font-weight: 600;
+    color: #667eea;
 }
 
-.card p {
-    font-size: 0.95rem;
+.contact-item p {
+    font-size: 1rem;
     color: #666;
-    line-height: 1.7;
+}
+
+.contact-item a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #764ba2;
+    text-decoration: underline;
 }
 
 /* Footer */
@@ -183,31 +172,6 @@ footer {
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
-}
-
-/* Animations */
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 /* Responsive Design */
@@ -230,7 +194,6 @@ footer {
 
     .hero-container {
         flex-direction: column;
-        gap: 2rem;
     }
 
     .hero h1 {
@@ -241,37 +204,13 @@ footer {
         font-size: 1rem;
     }
 
-    .featured {
-        padding: 2rem 1rem;
-    }
-
-    .featured-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .grid {
+    .contact-info {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar .logo {
-        font-size: 1.2rem;
-    }
-
-    .navbar nav {
-        gap: 0.5rem;
-    }
-
-    .navbar nav a {
-        margin: 0 0.5rem;
-    }
-
     .hero h1 {
         font-size: 1.5rem;
     }
@@ -282,17 +221,5 @@ footer {
 
     .featured-content h2 {
         font-size: 1.5rem;
-    }
-
-    .card {
-        padding: 1.5rem;
-    }
-
-    .card h3 {
-        font-size: 1.1rem;
-    }
-
-    .card p {
-        font-size: 0.85rem;
     }
 }
